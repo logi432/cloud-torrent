@@ -24,7 +24,7 @@ RUN set -ex \
 	openssl \
 	git \
 	go \
-	curl \
+	curl patch \
 	&& curl -s https://raw.githubusercontent.com/docker-library/golang/221ee92559f2963c1fe55646d3516f5b8f4c91a4/1.9/alpine3.6/no-pic.patch -o /no-pic.patch \
 	&& cat /no-pic.patch \
 	&& export GOROOT_BOOTSTRAP="$(go env GOROOT)" \
