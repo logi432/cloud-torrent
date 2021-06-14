@@ -12,6 +12,7 @@ go \
 curl
 RUN git clone https://github.com/logi432/cloud-torrent.git \
 && cd cloud-torrent \
+&& mv go.mod go.mod.old \
 && go build -v . \
 && ls -A \
 && export PORT=8080
